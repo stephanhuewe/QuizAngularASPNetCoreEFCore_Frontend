@@ -1,0 +1,25 @@
+    <mat-card>
+    <mat-card-title>
+        Register to our Quiz app
+    </mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="form" (ngSubmit)="register()">
+            <mat-form-field >
+                <mat-label>Email</mat-label>
+                <input type="email" name="email" matInput placeholder="Email" formControlName="email">
+            </mat-form-field>
+
+            <mat-form-field >
+                <mat-label>Password</mat-label>
+                <input type="password" name="password" matInput placeholder="Password" formControlName="password">
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" [disabled]="!form.valid">Register</button>
+
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        
+    </mat-card-actions>
+
+</mat-card>
