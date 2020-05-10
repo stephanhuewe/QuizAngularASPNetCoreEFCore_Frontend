@@ -22,9 +22,11 @@ import { QuizComponent } from './quiz.component';
 import { QuizzesComponent } from './quizzes.component';
 import { RegisterComponent } from './register.component';
 
+
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
 import { ApiService } from './api.service';
+import { AuthService} from './auth.service';
 
 
 const routes = [
@@ -62,7 +64,7 @@ const routes = [
     MatListModule,
     MatToolbarModule
   ],
-  providers: [ApiService],
+  providers: [ApiService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
